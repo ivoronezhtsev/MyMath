@@ -8,9 +8,15 @@ package ru.voronezhtsev.school;
  * @author Воронежцев Игорь on 10.10.2018
  */
 public class App {
-    private static final String COMPONENTS_COUNT = "Количество значений массива входящих в отрезок [c, d]: ";
+    private static final String COMPONENTS_COUNT = "Количество значений массива входящих в отрезок [c, d]: (параметр "
+            + "как массив):";
+    private static final String COMPONENTS_COUNT_LIST = "Количество значений массива входящих в отрезок [c, d]: " +
+            "(параметр как список через запятую):";
     public static void main(String[] args) {
-        System.out.println(COMPONENTS_COUNT +
+        System.out.println(COMPONENTS_COUNT_LIST +
                 MyMath.getComponentsCount(1, 3, 1,2, 3, 4, 5));
+        System.out.println(COMPONENTS_COUNT +
+                MyMath.getComponentsCount(1, 3, new int[]{1,2, 3, 4, 5}));
+
     }
 }
